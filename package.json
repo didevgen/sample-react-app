@@ -30,13 +30,14 @@
     "husky": {
         "hooks": {
             "pre-commit": "npm run precommit",
-            "pre-push": "npm run test"
+            "pre-push": "npm run test:ci"
         }
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
+        "test:ci": "npm test -- --watchAll=false",
         "eject": "react-scripts eject",
         "prettier": "pretty-quick",
         "precommit": "lint-staged",
